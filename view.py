@@ -1,9 +1,10 @@
 class View:
     def kuva_elemendid(self, elemendid):
         print("Kõik elemendid\n-------------------------------")
-        print("{:<10}  {:>10}    {:>10}".format("nimetus", "hind", "kogus\n-------------------------------"))
+        print("{:<10}  {:^10}  {:^10}".format("nimetus", "hind", "kogus\n-------------------------------"))
         for element in elemendid:
-            print("{:<10}  {:>10.2f} {:>10.2f}".format(element["nimetus"], element["hind"], element["kogus"]))
+            print("{:<10}  {:^10}  {:^10}".format(element["nimetus"], element["hind"], element["kogus"]))
+        print("-------------------------------")
 
     def kuva_element(self, nimetus, element):
         print(" Kuvame {} elementi andmed".format(nimetus))
